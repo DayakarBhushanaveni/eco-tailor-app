@@ -1,0 +1,8 @@
+{
+  "name": "eco-tailor-app",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}

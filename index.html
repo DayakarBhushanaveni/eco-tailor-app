@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoTailor App - Prototype</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><button onclick="showScreen('home')">Home</button></li>
+      <li><button onclick="showScreen('tryon')">Try-On</button></li>
+      <li><button onclick="showScreen('materials')">Materials</button></li>
+      <li><button onclick="showScreen('profile')">Profile</button></li>
+    </ul>
+  </nav>
+
+  <!-- Home Screen -->
+  <section id="home" class="screen active">
+    <h1>Welcome to EcoTailor!</h1>
+    <p>Hello, Eco Designer 👋</p>
+    <div class="featured">
+      <h2>Featured Eco-friendly Designs</h2>
+      <div class="designs">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=300&q=80" alt="Eco Dress">
+          <p>Bamboo Silk Dress</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=300&q=80" alt="Eco Shirt">
+          <p>Organic Cotton Shirt</p>
+        </div>
+      </div>
+    </div>
+    <button id="ai-style" onclick="alert('AI Style Assistant coming soon!')">AI Style Assistant</button>
+  </section>
+
+  <!-- Try-On Screen -->
+  <section id="tryon" class="screen">
+    <h1>Virtual Try-On</h1>
+    <div class="ar-view">
+      <div class="ar-placeholder">
+        <p>[ AR Camera View Placeholder ]</p>
+        <img src="https://via.placeholder.com/200x300?text=Your+Outfit+Here" alt="AR Overlay">
+      </div>
+      <div class="ar-controls">
+        <button onclick="alert('Rotate feature coming soon!')">Rotate</button>
+        <button onclick="alert('Zoom feature coming soon!')">Zoom</button>
+        <button onclick="alert('Save feature coming soon!')">Save</button>
+        <button onclick="alert('Share feature coming soon!')">Share</button>
+      </div>
+      <div class="suggestions">
+        <h2>Style Suggestions</h2>
+        <ul>
+          <li>Try a linen blend for summer looks!</li>
+          <li>Earthy tones complement your skin tone.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Material Selection Screen -->
+  <section id="materials" class="screen">
+    <h1>Material Selection</h1>
+    <div class="filters">
+      <label>Type:
+        <select>
+          <option>All</option>
+          <option>Bamboo</option>
+          <option>Cotton</option>
+          <option>Linen</option>
+        </select>
+      </label>
+      <label>Impact Score:
+        <select>
+          <option>All</option>
+          <option>Low</option>
+          <option>Moderate</option>
+          <option>High</option>
+        </select>
+      </label>
+      <label>Price:
+        <select>
+          <option>All</option>
+          <option>Low</option>
+          <option>Mid</option>
+          <option>Premium</option>
+        </select>
+      </label>
+    </div>
+    <div class="materials-list">
+      <div class="material-card" onclick="showMaterialDetail('Bamboo Fabric', 'Soft, sustainable and antibacterial.', 'Bamboo plantations', 'Low impact')">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=300&q=80" alt="Bamboo">
+        <p>Bamboo Fabric</p>
+      </div>
+      <div class="material-card" onclick="showMaterialDetail('Organic Cotton', 'Grown without pesticides, soft and breathable.', 'Organic farms', 'Moderate impact')">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=300&q=80" alt="Cotton">
+        <p>Organic Cotton</p>
+      </div>
+    </div>
+    <div id="material-detail" class="material-detail hidden">
+      <h2 id="mat-title"></h2>
+      <p id="mat-desc"></p>
+      <p><strong>Source:</strong> <span id="mat-source"></span></p>
+      <p><strong>Environmental Impact:</strong> <span id="mat-impact"></span></p>
+      <button onclick="alert('Added to design!')">Add to Design</button>
+      <button onclick="hideMaterialDetail()">Close</button>
+    </div>
+  </section>
+
+  <!-- Profile Screen -->
+  <section id="profile" class="screen">
+    <h1>User Profile</h1>
+    <div class="profile-details">
+      <p><strong>Name:</strong> Eco Designer</p>
+      <p><strong>Measurements:</strong> 36-28-38</p>
+      <p><strong>Sustainability Score:</strong> 82/100 🌱</p>
+      <p><strong>Rewards:</strong> 5 Green Points</p>
+    </div>
+    <div class="saved-designs">
+      <h2>Saved Designs</h2>
+      <ul>
+        <li>Bamboo Silk Dress</li>
+        <li>Organic Cotton Shirt</li>
+      </ul>
+    </div>
+    <div class="settings">
+      <h2>Settings</h2>
+      <button onclick="alert('Preferences coming soon!')">Preferences</button>
+      <button onclick="alert('Log out coming soon!')">Log Out</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

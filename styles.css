@@ -1,0 +1,158 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #222;
+}
+nav {
+  background: #226d4a;
+  color: #fff;
+  padding: 0.5em 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline;
+}
+nav button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: border-bottom 0.2s;
+  padding: 0.5em 1em;
+}
+nav button:hover,
+nav button.active {
+  border-bottom: 3px solid #b4e197;
+}
+.screen {
+  display: none;
+  max-width: 700px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 2em;
+}
+.screen.active {
+  display: block;
+}
+.featured .designs {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+.card {
+  background: #e2ffe2;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1em;
+  flex: 1;
+}
+.card img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+#ai-style {
+  margin-top: 2em;
+  background: #226d4a;
+  color: #fff;
+  padding: 0.7em 2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.ar-view {
+  text-align: center;
+}
+.ar-placeholder {
+  margin: 1em auto;
+  background: #eef;
+  border-radius: 10px;
+  padding: 1em;
+  display: inline-block;
+}
+.ar-placeholder img {
+  width: 160px;
+  height: 240px;
+  margin-top: 0.5em;
+}
+.ar-controls button {
+  margin: 0.4em;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: none;
+  background: #b4e197;
+  cursor: pointer;
+}
+.suggestions {
+  margin-top: 2em;
+  text-align: left;
+}
+.suggestions ul {
+  padding-left: 1.2em;
+}
+.filters {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 1em;
+}
+.materials-list {
+  display: flex;
+  gap: 1em;
+  margin-top: 2em;
+}
+.material-card {
+  background: #e1f5e1;
+  border-radius: 7px;
+  padding: 1em;
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.material-card:hover {
+  box-shadow: 0 2px 8px #0002;
+}
+.material-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.material-detail {
+  background: #fffde4;
+  border: 1px solid #eec;
+  border-radius: 10px;
+  padding: 1.2em;
+  margin-top: 1.5em;
+  box-shadow: 0 2px 6px #0001;
+}
+.material-detail.hidden {
+  display: none;
+}
+.profile-details, .saved-designs, .settings {
+  margin-bottom: 1.5em;
+}
+@media (max-width: 800px) {
+  .screen {
+    padding: 1em;
+  }
+  .featured .designs, .materials-list {
+    flex-direction: column;
+  }
+  nav ul {
+    gap: 1em;
+  }
+}
